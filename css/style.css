@@ -1,0 +1,124 @@
+:root {
+    color-scheme: light dark;
+    --font-color: #333333;
+    --background-color: white;
+    --DT-logo-background: 315deg, rgb(110, 110, 110) 0%, black 100%;
+}
+
+/* Dark Model */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --font-color: white;
+        --background-color: black;
+        --DT-logo-background: 315deg, white 0%, white 100%;
+    }
+}
+
+/* 引入字体 */
+@font-face {
+    font-family: DT;
+    src: url('../font/DT.ttf'),
+         url('../font/DT.otf'),
+         url('../font/DT.woff'),
+         url('../font/DT.eot'); /* IE9 */
+}
+
+* {
+	-webkit-touch-callout:none; /**系统默认菜单被禁用**/
+	-webkit-user-select:none; /**webkit浏览器**/
+	-moz-user-select:none; /**火狐**/
+	-ms-user-select:none; /**IE10**/
+	user-select:none;
+}
+
+input , textarea {
+	-webkit-user-select:auto;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+a, a:visited, a:active {
+    color: var(--font-color);
+}
+
+a#blog {
+    position: absolute;
+    right: 24px;
+    top: 12px;
+    font-size: 18px;
+}
+
+a#blog::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.content {
+    margin-top: 100px;
+    width: 100%;
+}
+
+#DT {
+    overflow: hidden;
+    text-align: center;
+    font-family: DT;
+    display: block;
+    margin: 0 auto;
+    font-size: 900px;
+    height: 700px;
+    line-height: 700px;
+    color: white;
+    background: linear-gradient(var(--DT-logo-background));
+    background-repeat: round;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    /* text-fill-color: transparent; */
+}
+
+/* 移动端适配 */
+@media screen and (max-device-width:480px) {
+    #DT {
+        overflow: hidden;
+        text-align: center;
+        font-family: DT;
+        display: block;
+        margin: 0 auto;
+        font-size: 480px;
+        height: 480px;
+        line-height: 480px;
+        color: white;
+        background: linear-gradient(var(--DT-logo-background));
+        background-repeat: round;
+        background-size: cover;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        -o-text-fill-color: transparent;
+        /* text-fill-color: transparent; */
+    }
+}
+
+#footer{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    position: fixed;
+    bottom: 0;
+}
